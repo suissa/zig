@@ -24,6 +24,7 @@ fd: Handle,
 pub const Handle = posix.fd_t;
 
 pub const default_mode = 0o755;
+pub const Watch = fs.Watch;
 
 pub const Entry = struct {
     name: []const u8,
