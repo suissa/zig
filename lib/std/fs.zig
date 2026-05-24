@@ -18,6 +18,7 @@ const is_darwin = native_os.isDarwin();
 pub const AtomicFile = @import("fs/AtomicFile.zig");
 pub const Dir = @import("fs/Dir.zig");
 pub const File = @import("fs/File.zig");
+pub const Watch = @import("fs/Watch.zig").Watch;
 pub const path = @import("fs/path.zig");
 
 pub const has_executable_bit = switch (native_os) {
