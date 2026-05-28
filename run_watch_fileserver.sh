@@ -8,6 +8,11 @@ if [[ $# -lt 1 ]]; then
 fi
 
 TARGET_DIR="$1"
+if [[ ! -d "${TARGET_DIR}" ]]; then
+  echo "Erro: '${TARGET_DIR}' não é uma pasta."
+  echo "Passe uma pasta para monitorar, por exemplo: $0 ./public"
+  exit 1
+fi
 
 echo "[watch-runner] iniciando monitoramento de: ${TARGET_DIR}"
 echo "[watch-runner] logs aparecerão no terminal abaixo"
